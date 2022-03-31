@@ -24,9 +24,9 @@ Dashboard Installation
 
     urlpatterns = patterns(
         '',
-        url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
-        url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
-        url(r'^admin/', include(admin.site.urls)),
+        re_path(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
+        re_path(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+        re_path(r'^admin/', include(admin.site.urls)),
         ...
     )
 
